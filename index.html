@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dark Mode */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        form {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+        }
+
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+            width: 100%;
+            text-align: left;
+        }
+
+        input[type="file"], select, button {
+            margin-top: 8px;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #6200ee;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+
+        #output {
+            margin-top: 30px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        p, li {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Resume Analyzer & Job Matcher</h2>
+    <form id="resumeForm">
+        <label>Upload Resume (PDF/DOCX):</label>
+        <input type="file" id="resume" required>
+        
+        <label>Select Job Role:</label>
+<select id="job" required>
+    <option value="">--Select Job--</option>
+    <option value="Software Engineer">Software Engineer</option>
+    <option value="Frontend Developer">Frontend Developer</option>
+    <option value="Backend Developer">Backend Developer</option>
+    <option value="Full Stack Developer">Full Stack Developer</option>
+    <option value="Data Analyst">Data Analyst</option>
+    <option value="Data Scientist">Data Scientist</option>
+    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+    <option value="DevOps Engineer">DevOps Engineer</option>
+    <option value="Cloud Engineer">Cloud Engineer</option>
+    <option value="AI Engineer">AI Engineer</option>
+</select>
+    
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
